@@ -1,0 +1,23 @@
+.container {
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-extra-wide);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+  text-transform: none;
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-secondary);
+  margin-top: 0;
+}

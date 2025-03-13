@@ -1,0 +1,63 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-extra-wide);
+  color: var(--color-secondary);
+  margin-top: var(--spacing-sm);
+  text-transform: uppercase;
+}
+
+.featured {
+  max-width: var(--content-width);
+  margin: 0 auto var(--spacing-xl);
+}
+
+.quote {
+  border-left: 1px solid var(--color-accent);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.quote p {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: var(--spacing-sm);
+}
+
+.quote cite {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-secondary);
+}

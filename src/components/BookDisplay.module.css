@@ -1,0 +1,73 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-xl);
+}
+
+.cover {
+  margin-bottom: var(--spacing-md);
+  align-self: center;
+}
+
+.coverImage {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.description {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.purchaseLink {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-text);
+  color: white;
+  border-radius: 0;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: background-color 0.2s ease;
+}
+
+.purchaseLink:hover {
+  background-color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .book {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+  }
+  
+  .cover {
+    flex: 0 0 300px;
+    margin-bottom: 0;
+  }
+  
+  .title {
+    text-align: left;
+  }
+  
+  .links {
+    justify-content: flex-start;
+  }
+}

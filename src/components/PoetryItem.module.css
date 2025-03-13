@@ -1,0 +1,44 @@
+.item {
+  margin-bottom: var(--spacing-lg);
+  border-left: 1px solid transparent;
+  padding-left: var(--spacing-sm);
+  transition: border-color 0.3s ease;
+}
+
+.item:hover {
+  border-color: var(--color-text);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  margin-bottom: var(--spacing-xs);
+}
+
+.title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.title a:hover {
+  color: var(--color-accent);
+}
+
+.metadata {
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.publication {
+  font-style: italic;
+}
+
+.year {
+  margin-left: var(--spacing-sm);
+}
