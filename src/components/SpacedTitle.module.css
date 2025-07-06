@@ -1,23 +1,46 @@
 .container {
   text-align: center;
-  margin: var(--spacing-xl) 0;
+  /* Adjusted margin for flexibility, hero might not need this much top/bottom margin */
+  margin: var(--spacing-md) 0;
 }
 
 .title {
   font-family: var(--font-primary);
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Default size */
   font-weight: var(--font-weight-normal);
   letter-spacing: var(--letter-spacing-extra-wide);
   line-height: 1.5;
   margin-bottom: var(--spacing-sm);
   text-transform: none;
+  color: var(--color-text); /* Default text color */
 }
 
 .subtitle {
   font-family: var(--font-primary);
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Default size */
   font-weight: var(--font-weight-normal);
   letter-spacing: var(--letter-spacing-wide);
-  color: var(--color-secondary);
+  color: var(--color-secondary); /* Default subtitle color */
   margin-top: 0;
+  text-transform: uppercase; /* Subtitles are often uppercase */
+}
+
+/* Variants for dark theme */
+.title.dark {
+  color: var(--color-background); /* White text for dark backgrounds */
+}
+
+.subtitle.dark {
+  color: rgba(255, 255, 255, 0.85); /* Lighter subtitle for dark backgrounds */
+}
+
+/* Size variants if needed, e.g., for hero section */
+.title.large {
+  font-size: 3.5rem; /* Larger size for hero */
+  letter-spacing: var(--letter-spacing-extra-wide); /* Ensure this is consistent or adjusted */
+}
+
+.subtitle.large {
+  font-size: 1.25rem; /* Larger size for hero */
+  letter-spacing: var(--letter-spacing-wide); /* Ensure this is consistent or adjusted */
 }

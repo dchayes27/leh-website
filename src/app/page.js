@@ -3,14 +3,19 @@ import SpacedTitle from '../components/SpacedTitle';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    // Removed styles.container from here to allow hero to be full-width
+    // It can be added to specific sections if needed, or use the .main-container from globals.css
+    <>
       <section className={styles.hero}>
         <SpacedTitle 
           title="Linda Hillman Chayes" 
-          subtitle="Poet & Writer" 
+          subtitle="Poet & Writer"
+          theme="dark" // Pass the theme prop for dark background
+          size="large"  // Pass the size prop for larger hero titles
         />
       </section>
       
+      {/* Wrap subsequent sections in a container if they need to be constrained */}
       <section className={styles.featured}>
         {/* This can be replaced with a featured poem or quote from Linda */}
         <blockquote className={styles.quote}>

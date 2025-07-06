@@ -1,37 +1,43 @@
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-sm);
-}
+/* page.module.css */
 
+/* Styles for the hero section */
 .hero {
   height: 70vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-image: url('/images/abstract-hydrangea-texture.svg'); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* Text color is handled by SpacedTitle theme prop */
 }
 
-.title {
-  font-family: var(--font-primary);
-  font-size: 3.5rem;
-  font-weight: var(--font-weight-normal);
-  letter-spacing: var(--letter-spacing-wide);
-  margin-bottom: var(--spacing-xs);
-  color: var(--color-text);
+.hero::before { /* Overlay for better text contrast */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Adjusted overlay color for potentially better harmony with new theme */
+  background-color: rgba(var(--color-accent-rgb, 0, 119, 182), 0.45); /* Using accent color with opacity */
+  /* Fallback if CSS variables in rgba aren't supported or --color-accent-rgb isn't defined */
+  /* background-color: rgba(0, 77, 182, 0.45); */
+  z-index: 1;
 }
 
-.subtitle {
-  font-family: var(--font-primary);
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-normal);
-  letter-spacing: var(--letter-spacing-extra-wide);
-  color: var(--color-secondary);
-  margin-top: var(--spacing-sm);
-  text-transform: uppercase;
+/* Ensure SpacedTitle component (direct child div of .hero) is above the overlay */
+.hero > div {
+  position: relative;
+  z-index: 2;
 }
 
+/* Styles for the featured quote section */
 .featured {
   max-width: var(--content-width);
   margin: 0 auto var(--spacing-xl);

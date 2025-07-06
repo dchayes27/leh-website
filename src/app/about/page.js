@@ -9,7 +9,7 @@ export default function About() {
       <div className={styles.content}>
         <div className={styles.photo}>
           {/* Replace with Linda's actual photo when available */}
-          <div className={styles.placeholderPhoto}>
+          <div className={styles.placeholderPhoto} role="img" aria-label="Placeholder for Linda Hillman Chayes's photo - Photo coming soon">
             <div className={styles.photoText}>Photo Coming Soon</div>
           </div>
         </div>
