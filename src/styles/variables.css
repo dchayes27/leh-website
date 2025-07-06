@@ -3,6 +3,7 @@
   --color-background: #FDFDFD; /* Slightly off-white for a softer look */
   --color-text: #1A1A1A;       /* Dark, but not pure black for less harshness */
   --color-accent: #0077B6;     /* A calm blue for accents */
+  --color-accent-rgb: 0, 119, 182; /* RGB version of accent color for rgba() */
   --color-secondary: #48A9A6;  /* A teal for secondary elements */
   --color-light: #EFEFEF;      /* Light gray for backgrounds/borders */
   --color-muted: #757575;      /* Muted gray for less important text */
