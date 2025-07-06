@@ -1,6 +1,11 @@
 .nav {
-  padding: var(--spacing-md) var(--spacing-sm);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: var(--spacing-sm) var(--spacing-md); /* Adjusted padding */
+  border-bottom: 1px solid var(--color-light); /* Use variable for border color */
+  background-color: var(--color-background);
+  position: sticky; /* Make nav sticky */
+  top: 0;
+  z-index: 1000; /* Ensure nav is above other content */
+  box-shadow: var(--box-shadow-light); /* Add subtle shadow for depth */
 }
 
 .container {
@@ -9,16 +14,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-normal);
-  letter-spacing: var(--letter-spacing-wide);
-  color: var(--color-text);
+  font-size: var(--font-size-md); /* Use font size variable */
+  font-weight: var(--font-weight-bold); /* Bolder logo */
+  letter-spacing: var(--letter-spacing-normal); /* Adjusted spacing */
+  color: var(--color-accent); /* Use accent color for logo */
   text-decoration: none;
   text-transform: uppercase;
+  padding: var(--spacing-xs) 0; /* Add some padding */
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--color-secondary); /* Hover effect for logo */
 }
 
 .links {
@@ -27,30 +39,90 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center; /* Align items vertically */
 }
 
 .links a {
   font-family: var(--font-secondary);
-  font-size: 0.85rem;
-  font-weight: 300;
-  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-sm); /* Use font size variable */
+  font-weight: var(--font-weight-medium); /* Medium weight for nav links */
+  letter-spacing: var(--letter-spacing-normal); /* Adjusted spacing */
   text-decoration: none;
-  color: var(--color-secondary);
-  transition: color 0.2s ease;
+  color: var(--color-text); /* Use primary text color for better contrast */
+  padding: var(--spacing-xs) var(--spacing-sm); /* Add padding for larger click target */
+  border-radius: var(--border-radius-sm); /* Add subtle rounding */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transitions */
   text-transform: uppercase;
 }
 
-.links a:hover {
-  color: var(--color-text);
+.links a:hover,
+.links a:focus {
+  color: var(--color-background); /* Change text color on hover */
+  background-color: var(--color-accent); /* Add background on hover/focus */
+  text-decoration: none; /* Remove underline from global styles for nav links */
+}
+
+/* Style for active link - assuming a utility class `activeLink` is added in JS if needed */
+.links a.activeLink {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* Mobile navigation */
+.menuToggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: var(--font-size-lg); /* Larger icon */
+  cursor: pointer;
+  padding: var(--spacing-xs);
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    gap: var(--spacing-sm);
+    flex-direction: row; /* Keep logo and toggle on same line */
+    justify-content: space-between;
   }
-  
+
+  .menuToggle {
+    display: block; /* Show hamburger menu */
+  }
+
   .links {
-    gap: var(--spacing-sm);
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-background);
+    position: absolute;
+    top: 100%; /* Position below the nav bar */
+    left: 0;
+    padding: var(--spacing-sm) 0;
+    box-shadow: var(--box-shadow-medium);
+    border-top: 1px solid var(--color-light);
+  }
+
+  .links.open { /* Class to show links when menu is toggled */
+    display: flex;
+  }
+
+  .links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .links a {
+    display: block; /* Make links take full width */
+    padding: var(--spacing-sm);
+    width: 100%;
+    border-radius: 0; /* Remove border-radius for full-width mobile links */
+  }
+
+  .links a:hover,
+  .links a:focus {
+    background-color: var(--color-light); /* Lighter background for hover on mobile */
+    color: var(--color-accent);
   }
 }

@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   font-family: var(--font-primary);
   font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base); /* Base font size */
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: var(--line-height-body);
@@ -20,30 +21,83 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--color-accent); /* Use accent color for links */
   text-decoration: none;
+  transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline; /* Underline on hover/focus for better affordance */
+  color: var(--color-secondary); /* Change color on hover */
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--border-radius-sm); /* Subtle rounding for images */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-normal);
+  font-family: var(--font-primary); /* Titles use primary font */
+  font-weight: var(--font-weight-bold); /* Bolder titles */
   line-height: var(--line-height-title);
   letter-spacing: var(--letter-spacing-wide);
-  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-lg); /* Add top margin for spacing */
+  margin-bottom: var(--spacing-sm); /* Adjust bottom margin */
+  color: var(--color-text); /* Ensure titles have strong contrast */
 }
 
 h1 {
+  font-size: var(--font-size-xxl);
   letter-spacing: var(--letter-spacing-extra-wide);
 }
 
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium); /* Slightly less bold for h3 */
+}
+
+h4 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
 p {
-  margin-bottom: var(--spacing-md);
-  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: var(--spacing-md); /* Consistent paragraph spacing */
+  letter-spacing: var(--letter-spacing-normal); /* Use normal letter spacing */
   font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base); /* Ensure paragraph text uses base size */
+}
+
+/* Utility classes for text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Consistent container for main content */
+.main-container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Add some focus styling for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
