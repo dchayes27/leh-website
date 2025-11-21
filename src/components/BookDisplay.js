@@ -13,6 +13,7 @@ export default function BookDisplay({ title, coverImage, description, purchaseLi
         <div className={styles.cover}>
           {isSvg ? (
             // Use regular img tag for SVG
+            // eslint-disable-next-line @next/next/no-img-element
             <img 
               src={coverImage} 
               alt={`${title} book cover`} 

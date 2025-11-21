@@ -15,15 +15,17 @@ export default function About() {
         </div>
         
         <div className={styles.bio}>
-          {/* Replace with Linda's actual bio */}
           <p>
-            Linda Hillman Chayes is a poet and writer whose work explores themes of memory, nature, and human relationships. Her poetry has appeared in numerous journals and anthologies.
+            [Linda Hillman Chayes is a poet and writer whose work explores themes of memory, nature, and human relationships. Her poetry has appeared in numerous journals and anthologies.]
           </p>
           <p>
-            Born and raised in [Location], Linda draws inspiration from both urban and natural landscapes. Her writing has been recognized with several awards, including [Awards if applicable].
+            [Born and raised in New York City, Linda draws inspiration from...]
           </p>
           <p>
-            Linda is the author of [Book Titles]. She currently lives in [Location] where she teaches creative writing and participates in local literary events.
+            [She is the author of the collection...]
+          </p>
+          <p className={styles.note}>
+            * Please provide a biography to replace this placeholder text.
           </p>
         </div>
       </div>

@@ -40,6 +40,13 @@
   line-height: 1.8;
 }
 
+.note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-secondary);
+  margin-top: var(--spacing-lg);
+}
+
 @media (min-width: 768px) {
   .content {
     flex-direction: row;
