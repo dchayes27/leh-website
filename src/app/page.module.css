@@ -37,27 +37,16 @@
   margin: 0 auto var(--spacing-xl);
 }
 
-.quote {
-  border-left: 1px solid var(--color-accent);
-  padding-left: var(--spacing-md);
-  margin: var(--spacing-lg) 0;
-}
-
-.quote p {
-  font-family: var(--font-primary);
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-normal);
-  font-style: italic;
-  line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-tight);
-  margin-bottom: var(--spacing-sm);
-}
-
-.quote cite {
-  font-family: var(--font-secondary);
-  font-size: 0.9rem;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: var(--letter-spacing-normal);
+.placeholderFeatured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border: 1px dashed var(--color-accent);
   color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  opacity: 0.6;
 }

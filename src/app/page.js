@@ -12,11 +12,9 @@ export default function Home() {
       </section>
       
       <section className={styles.featured}>
-        {/* This can be replaced with a featured poem or quote from Linda */}
-        <blockquote className={styles.quote}>
-          <p>"Poetry is not a turning loose of emotion, but an escape from emotion; it is not the expression of personality, but an escape from personality."</p>
-          <cite>— T.S. Eliot</cite>
-        </blockquote>
+        <div className={styles.placeholderFeatured}>
+          <p>Featured Poem Coming Soon</p>
+        </div>
       </section>
     </div>
   );

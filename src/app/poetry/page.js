@@ -3,11 +3,15 @@ import SpacedTitle from '../../components/SpacedTitle';
 import styles from './poetry.module.css';
 
 export default function Poetry() {
-  // This will be replaced with actual data from Linda
+  // These are placeholders. Please replace with actual data.
   const poems = [
-    { title: "Sample Poem Title", publication: "Poetry Magazine", year: "2023", link: "#" },
-    { title: "Another Example", publication: "The New Yorker", year: "2022", link: "#" },
-    { title: "Third Sample", publication: "Yale Review", year: "2021", link: "#" },
+    { title: "The Color of Winter", publication: "Poetry Magazine", year: "2023", link: "https://www.poetryfoundation.org/" },
+    { title: "Morning at the Reservoir", publication: "The New Yorker", year: "2022", link: "https://www.newyorker.com/magazine/poetry" },
+    { title: "Silence in the Garden", publication: "Yale Review", year: "2021", link: "https://yalereview.org/" },
+    { title: "Reflections on Water", publication: "The Paris Review", year: "2021", link: "https://www.theparisreview.org/poetry" },
+    { title: "Understanding the Light", publication: "Ploughshares", year: "2020", link: "https://www.pshares.org/" },
+    { title: "Walking Through Shadows", publication: "Kenyon Review", year: "2019", link: "https://kenyonreview.org/" },
+    { title: "The Last Autumn", publication: "Tin House", year: "2018", link: "https://tinhouse.com/" },
   ];
 
   return (
