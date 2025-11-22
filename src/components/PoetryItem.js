@@ -5,7 +5,7 @@ export default function PoetryItem({ title, publication, year, link }) {
     <div className={styles.item}>
       <h3 className={styles.title}>
         {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">"{title}"</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">&quot;{title}&quot;</a>
         ) : (
           `"${title}"`
         )}
