@@ -2,10 +2,11 @@
   /* Colors - Monochromatic Scheme */
   --color-background: #FFFFFF;  /* Pure white background */
   --color-text: #000000;        /* Pure black text */
-  --color-accent: #333333;      /* Dark gray for accents */
+  --color-accent: #78909C;      /* Lighter slate blue-grey for better harmony with water */
   --color-secondary: #666666;   /* Medium gray for secondary elements */
   --color-light: #F5F5F5;       /* Very light gray for subtle backgrounds */
   --color-muted: #999999;       /* For less important text */
+  --color-overlay: rgba(0, 0, 0, 0.4); /* Dark overlay for hero readability */
   
   /* Typography */
   --font-primary: 'EB Garamond', 'Garamond', Georgia, serif;
@@ -29,4 +30,9 @@
   /* Layout */
   --max-width: 1200px;
   --content-width: 680px;
+
+  /* Animation */
+  --animation-duration-slow: 2s;
+  --animation-duration-medium: 1s;
+  --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
 }
